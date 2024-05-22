@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width:600px){
+    html{
+        font-size:8px;
+    }
+}
+
+@media screen and (min-width:600px){
+    html{
+        font-size:16px;
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 0.8s linear, color 0.8s linear;
+}
+
+.toggleContainer input{
+    vertical-align: middle;
+}
+
+.toggleContainer{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+}
+
+.toggleContainer input{
+    visibility: hidden;
+}
+
+
+
+label{
+    user-select: none;
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: rebeccapurple;
+    transition: background-color 0.8s;
+    cursor: pointer;
+    display: inline-block;
+    transform: translate(5px,5px);
+}
+
+label:active{
+    transform: translate(5px,7px);
+}
+
+body.dark{
+    background-color: black;
+    color: white;
+}
+
+body.dark label{
+    background-color: white;
+}
